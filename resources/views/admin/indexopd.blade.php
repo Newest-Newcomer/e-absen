@@ -163,16 +163,14 @@
                                 <tbody>
                                     <?php $no = 0;?>
                                      @foreach($md as $meet)
-                                        @if($meet->id_opt == $user)
-                                            <?php $no++ ;?>
-                                            <tr>
-                                                <th scope="row">{{ $no }}</th>
-                                                <td>{{ $meet->nama_kegiatan }}</td>
-                                                <td>{{ $meet->tanggal }}</td>
-                                                <td>Dibuat</td>
-                                                <td><button class="btn btn-info"><a href="/admin/opr/drapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
-                                            </tr>
-                                        @endif
+                                        <?php $no++ ;?>
+                                        <tr>
+                                            <th scope="row">{{ $no }}</th>
+                                            <td>{{ $meet->nama_kegiatan }}</td>
+                                            <td>{{ $meet->tanggal }}</td>
+                                            <td>Dibuat</td>
+                                            <td><button class="btn btn-info"><a href="/admin/opr/drapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -198,16 +196,14 @@
                                 <tbody>
                                     <?php $no = 0;?>
                                     @foreach($mb as $meet)
-                                        @if($meet->id_opt == $user)
-                                            <?php $no++ ;?>
-                                            <tr>
-                                                <th scope="row">{{ $no }}</th>
-                                                <td>{{ $meet->nama_kegiatan }}</td>
-                                                <td>{{ $meet->tanggal }}</td>
-                                                <td>Berlangsung</td>
-                                                <td><button class="btn btn-info"><a href="/admin/opr/dbrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
-                                            </tr>
-                                        @endif
+                                        <?php $no++ ;?>
+                                        <tr>
+                                            <th scope="row">{{ $no }}</th>
+                                            <td>{{ $meet->nama_kegiatan }}</td>
+                                            <td>{{ $meet->tanggal }}</td>
+                                            <td>Berlangsung</td>
+                                            <td><button class="btn btn-info"><a href="/admin/opr/dbrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -234,28 +230,24 @@
                                 <tbody>
                                     <?php $no = 0;?>
                                     @foreach($ms as $meet)
-                                        @if($meet->id_opt == $user)
-                                            <?php $no++ ;?>
-                                            <tr>
-                                                <th scope="row">{{ $no }}</th>
-                                                <td>{{ $meet->nama_kegiatan }}</td>
-                                                <td>{{ $meet->tanggal }}</td>
-                                                <td>Selesai</td>
-                                                <td><button class="btn btn-info"><a href="/admin/opr/drrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
-                                            </tr>
-                                        @endif
+                                        <?php $no++ ;?>
+                                        <tr>
+                                            <th scope="row">{{ $no }}</th>
+                                            <td>{{ $meet->nama_kegiatan }}</td>
+                                            <td>{{ $meet->tanggal }}</td>
+                                            <td>Selesai</td>
+                                            <td><button class="btn btn-info"><a href="/admin/opr/drrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
+                                        </tr>
                                     @endforeach
                                     @foreach($mg as $meet)
-                                    @if($meet->id_opt == $user)
-                                            <?php $no++ ;?>
-                                            <tr>
-                                                <th scope="row">{{ $no }}</th>
-                                                <td>{{ $meet->nama_kegiatan }}</td>
-                                                <td>{{ $meet->tanggal }}</td>
-                                                <td>Batal</td>
-                                                <td><button class="btn btn-info"><a href="/admin/opr/drrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
-                                            </tr>
-                                        @endif
+                                        <?php $no++ ;?>
+                                        <tr>
+                                            <th scope="row">{{ $no }}</th>
+                                            <td>{{ $meet->nama_kegiatan }}</td>
+                                            <td>{{ $meet->tanggal }}</td>
+                                            <td>Batal</td>
+                                            <td><button class="btn btn-info"><a href="/admin/opr/drrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>

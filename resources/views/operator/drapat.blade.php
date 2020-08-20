@@ -58,7 +58,7 @@
             </form>
         </div>
         <div class="form-group mr-2">
-            <button class="btn btn-info my-2 my-sm-0"><a href="/admin/opr/erapat/{{ $meeting->id_rapat }}" class="text-white">Edit</a></button>
+            <button class="btn btn-info my-2 my-sm-0"><a href="erapat/{{ $meeting->id_rapat }}" class="text-white">Edit</a></button>
         </div>
         <div class="form-group">
             <form action="batal/{{ $meeting->id_rapat }}" method="POST">

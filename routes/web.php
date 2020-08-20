@@ -85,10 +85,10 @@ Route::post('/admin/meeting', 'AdminsController@store_meeting')->middleware('aut
 
 Route::get('admin/opr/drapat/{meeting}', 'MeetingsController@show')->middleware('auth:admin')->name('admin_opr');
 Route::put('admin/opr/drapat/{meeting}', 'AdminsController@update_stat_mulai')->middleware('auth:admin');
+Route::get('admin/opr/drapat/erapat/{meeting}', 'MeetingsController@edit')->middleware('auth:admin');
+Route::patch('admin/opr/drapat/erapat/{meeting}', 'AdminsController@update_rapat')->middleware('auth:admin');
 
 Route::get('admin/opr/dbrapat/{meeting}', 'MeetingsController@show_dbrapat')->middleware('auth:admin');
-Route::get('admin/opr/erapat/{meeting}', 'MeetingsController@edit')->middleware('auth:admin');
-Route::patch('admin/opr/erapat/{meeting}', 'AdminsController@update_rapat')->middleware('auth:admin');
 Route::put('/admin/opr/drapat/batal/{meeting}', 'AdminsController@update_stat_batal')->middleware('auth:admin');
 
 Route::patch('/admin/opr/dbrapat/{meeting}', 'PhotosController@store')->middleware('auth:admin');

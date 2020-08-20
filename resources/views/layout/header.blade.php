@@ -8,7 +8,7 @@
                 <div class="mr-auto">
                     <div class="row">
                         <img src="{{ asset('image/logo.jpeg') }}" class="logo_hdr ml-2" width="70px" >
-                        <h2 class="ml-3 mt-3 font-weight-light">e-Absent</h2>
+                        <h2 class="ml-3 mt-3 font-weight-light">e-absen</h2>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
 
             <footer class="main-footer box_footer" align="center">
                 <strong>
-                    <h6>e-Absent</h6>
+                    <h6>e-absen</h6>
                     <h6>Mahasiswa Kerja Praktik IT DEL © 2020</h6>
                     <h6>Dinas Komunikasi dan Informatika Kabupaten Humbang Hasundutan</h6>
                 </strong>

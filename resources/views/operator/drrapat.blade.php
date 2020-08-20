@@ -114,6 +114,7 @@
 
                                 @endif
 
+
     <div class="row col-sm-8">
 
         <div class="form-group">
@@ -129,11 +130,9 @@
     </div>
     <div class="row col-sm-12  ml-2 mt-1">
         @foreach($photo as $foto)
-            {{-- @if($foto->id_rapat == $meeting->id_rapat) --}}
-                <div id="grid-system2-body" class="box-body">
-                    <img src="{{ asset('image')}}/{{$foto->foto }}" width="250" alt="foto" class="rounded mr-3 mt-3 box">
-                </div>
-            {{-- @endif --}}
+            <div id="grid-system2-body" class="box-body">
+                <img src="{{ asset('image')}}/{{$foto->foto }}" width="250" alt="foto" class="rounded mr-3 mt-3 box">
+            </div>
         @endforeach
     </div>
     <hr>
@@ -156,16 +155,12 @@
             </thead>
             <tbody>
                 @foreach($audiences as $audience)
-                    @if ($audience->id_rapat == $meeting->id_rapat)
-                        {{-- @if($audience->created_at > $meeting->started_at && $audience->created_at < $meeting->ended_at) --}}
-                        <tr>
-                            <td>{{ $audience->nip }}</td>
-                            <td>{{ $audience->nama }}</td>
-                            <td>{{ $audience->instansi }}</td>
-                            <td>{{ $audience->jabatan }}</td>
-                        </tr>
-                        {{-- @endif --}}
-                    @endif
+                    <tr>
+                        <td>{{ $audience->nip }}</td>
+                        <td>{{ $audience->nama }}</td>
+                        <td>{{ $audience->instansi }}</td>
+                        <td>{{ $audience->jabatan }}</td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>

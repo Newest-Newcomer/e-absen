@@ -51,7 +51,7 @@
                                 <tr><th>Pimpinan Rapat      </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->pimpinan_rapat }}"></td></tr>
                                 <tr><th>Notulis Rapat       </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->notulis }}"></td></tr>
                                 <tr><th>Kode Rapat          </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->kode_rapat }}"></td></tr>
-                                <tr><th><button type="submit" class="btn btn-secondary mr-4">Upload Foto</button></th><td><input type="file" id="foto_rapat" name="foto_rapat"></td></tr>
+                                <tr><th><button type="submit" class="btn btn-info mr-4">Upload Foto</button></th><td><input type="file" id="foto_rapat" name="foto_rapat"></td></tr>
 
     </form>
 
@@ -60,8 +60,8 @@
                                     @csrf
                                 <tr><th>Kesimpulan          </th>
                                     <td>
-                                        <p><textarea name="kesimpulan" id="kesimpulan" cols="52" rows="2" class="@error('nama_operator') is-invalid @enderror"></textarea></p>
-                                        @error('nama_operator')
+                                        <p><textarea name="kesimpulan" id="kesimpulan" cols="52" rows="2" class="@error('kesimpulan') is-invalid @enderror"></textarea></p>
+                                        @error('kesimpulan')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -89,18 +89,16 @@
     </div>
     <div class="row col-sm-12  ml-2 mt-1">
         @foreach($photo as $foto)
-            @if($foto->id_rapat == $meeting->id_rapat)
-                <form action="{{ $foto->id_foto }}/foto" method="POST">
-                    @method('delete')
-                    @csrf
-                    <div id="grid-system2-body" class="box-body">
-                        <img src="{{ asset('image')}}/{{$foto->foto }}" width="250" alt="foto" class="rounded mr-3 mt-3 box">
-                        <div class="mt-2">
-                            <button type="submit" class="btn btn-danger">Hapus Foto</button>
-                        </div>
+            <form action="{{ $foto->id_foto }}/foto" method="POST">
+                @method('delete')
+                @csrf
+                <div id="grid-system2-body" class="box-body">
+                    <img src="{{ asset('image')}}/{{$foto->foto }}" width="250" alt="foto" class="rounded mr-3 mt-3 box">
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-danger">Hapus Foto</button>
                     </div>
-                </form>
-            @endif
+                </div>
+            </form>
         @endforeach
     </div>
     <hr>
@@ -123,22 +121,18 @@
             </thead>
             <tbody>
                 @foreach($audiences as $audience)
-                    @if ($audience->id_rapat == $meeting->id_rapat)
-                        {{-- @if($audience->created_at > $meeting->started_at) --}}
-                        <tr>
-                            <td>{{ $audience->nip }}</td>
-                            <td>{{ $audience->nama }}</td>
-                            <td>{{ $audience->instansi }}</td>
-                            <td>{{ $audience->jabatan }}</td>
+                    <tr>
+                        <td>{{ $audience->nip }}</td>
+                        <td>{{ $audience->nama }}</td>
+                        <td>{{ $audience->instansi }}</td>
+                        <td>{{ $audience->jabatan }}</td>
 
-                            <form action="{{ $audience->nip }}/audience" method="POST">
-                                @method('delete')
-                                @csrf
-                                <td><button type="submit" class="btn fas fa-window-close fa-lg" style="color: red;"></button></td>
-                            </form>
-                        </tr>
-                        {{-- @endif --}}
-                    @endif
+                        <form action="{{ $audience->nip }}/audience" method="POST">
+                            @method('delete')
+                            @csrf
+                            <td><button type="submit" class="btn fas fa-window-close fa-lg" style="color: red;"></button></td>
+                        </form>
+                    </tr>
                 @endforeach
             </tbody>
         </table>

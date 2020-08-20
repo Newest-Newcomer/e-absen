@@ -22,17 +22,27 @@ class MeetingsController extends Controller
      */
     public function index()
     {
-        $md = Meeting::all()
-            ->where('status', '=', 'Dibuat');
+        $user = Auth::id();
 
-        $mb = Meeting::all()
-            ->where('status', '=', 'Berlangsung');
+        $md = Meeting::where([
+            ['status', '=', 'Dibuat'],
+            ['id_opt', '=', $user ],
+        ])->get();
 
-        $ms = Meeting::all()
-            ->where('status', '=', 'Selesai');
+        $mb = Meeting::where([
+            ['status', '=', 'Berlangsung'],
+            ['id_opt', '=', $user ],
+        ])->get();
 
-        $mg = Meeting::all()
-            ->where('status', '=', 'Batal');
+        $ms = Meeting::where([
+            ['status', '=', 'Selesai'],
+            ['id_opt', '=', $user ],
+        ])->get();
+
+        $mg = Meeting::where([
+            ['status', '=', 'Batal'],
+            ['id_opt', '=', $user ],
+        ])->get();
 
         return view('operator.index', compact('md', 'mb', 'ms', 'mg'));
     }
@@ -114,9 +124,13 @@ class MeetingsController extends Controller
     }
     public function show_dbrapat(Meeting $meeting)
     {
-        $audiences = Audience::all();
+        $audiences = Audience::where([
+            ['id_rapat', '=', $meeting->id_rapat],
+        ])->get();
 
-        $photo = Photo::all();
+        $photo = Photo::where([
+            ['id_rapat', '=', $meeting->id_rapat],
+        ])->get();
 
         return view('operator.dbrapat', compact('meeting', 'audiences', 'photo'));
     }
@@ -124,7 +138,8 @@ class MeetingsController extends Controller
     {
         $notulen = Notulen::all();
 
-        $audiences = Audience::all();
+        $audiences = Audience::where('id_rapat', $meeting->id_rapat)
+                    ->get();
 
         $photo = Photo::where('id_rapat', $meeting->id_rapat)
                     ->get('foto');
