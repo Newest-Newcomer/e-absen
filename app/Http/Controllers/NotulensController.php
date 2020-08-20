@@ -118,6 +118,10 @@ class NotulensController extends Controller
 
         $photo = Photo::all();
 
+        $cetak_foto = Photo::where('id_rapat', $meeting->id_rapat)->get('foto');
+
+        return $cetak_foto;
+
         $notulen = Notulen::all();
         // $photo = Photo::where('id_rapat', $meeting->id_rapat)
         //             ->get('foto');
@@ -128,7 +132,8 @@ class NotulensController extends Controller
         //     }
         // }
 
-    	$pdf = PDF::loadview('cetak', compact('meeting', 'audiences', 'photo', 'notulen'));
-        return $pdf->stream('absensi.pdf');
+    	// $pdf = PDF::loadview('cetak', compact('meeting', 'audiences', 'photo', 'notulen'));
+        // return $pdf->stream('absensi.pdf');
+        return view('cetak', compact('meeting', 'audiences', 'photo', 'notulen'));
     }
 }

@@ -140,17 +140,39 @@ class AdminsController extends Controller
 
     public function show_opd(Operator $operator, Meeting $meeting)
     {
-        $md = Meeting::all()
-            ->where('status', '=', 'Dibuat');
 
-        $mb = Meeting::all()
-            ->where('status', '=', 'Berlangsung');
 
-        $ms = Meeting::all()
-            ->where('status', '=', 'Selesai');
+        $md = Meeting::where([
+            ['status', '=', 'Dibuat'],
+            ['id_opt', '=', $operator->id ],
+        ])->get();
 
-        $mg = Meeting::all()
-            ->where('status', '=', 'Batal');
+        $mb = Meeting::where([
+            ['status', '=', 'Berlangsung'],
+            ['id_opt', '=', $operator->id ],
+        ])->get();
+
+        $ms = Meeting::where([
+            ['status', '=', 'Selesai'],
+            ['id_opt', '=', $operator->id ],
+        ])->get();
+
+        $mg = Meeting::where([
+            ['status', '=', 'Batal'],
+            ['id_opt', '=', $operator->id ],
+        ])->get();
+
+        // $md = Meeting::all()
+        //     ->where('status', '=', 'Dibuat');
+
+        // $mb = Meeting::all()
+        //     ->where('status', '=', 'Berlangsung');
+
+        // $ms = Meeting::all()
+        //     ->where('status', '=', 'Selesai');
+
+        // $mg = Meeting::all()
+        //     ->where('status', '=', 'Batal');
 
         $waktu = Audience::all();
 

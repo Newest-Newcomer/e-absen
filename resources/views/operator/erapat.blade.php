@@ -14,7 +14,7 @@
             <div>
                 <div id="grid-system2-body">
 
-                    <form action="/admin/opr/erapat/{{ $meeting->id_rapat }}" class="ml-3" method="POST">
+                    <form action="{{ $meeting->id_rapat }}" class="ml-3" method="POST">
                         @method('patch')
                         @csrf
                         <div class="row my-4">

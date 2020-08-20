@@ -4,7 +4,7 @@
 
 <div class="container box">
     <img src="image/logo.jpg" class="logo_lgn card-image-top" width="90px" >
-    <h3 align="center">e-Absent</h3>
+    <h3 align="center">e-absen</h3>
     <br/>
     <hr>
 
