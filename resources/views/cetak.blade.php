@@ -56,16 +56,8 @@
 
         <div class="row col-sm-12  ml-2 mt-1">
             @foreach($photo as $foto)
-                @if($foto->id_rapat == $meeting->id_rapat)
-                <?php
-                $nama_foto = $foto->get('foto');
-                ?>
-
-                {{-- ganti seleksi datanya jadi di controller --}}
-                {{-- ini datanya masih dalam bentuk array --}}
-                {{-- <img src="{{ asset('image')}}/{{ $nama_foto }}" width="150" alt="foto" class="rounded mr-3 mt-3 box img-load"> --}}
+                <img src="image/{{ $foto->foto }}" width="150" alt="foto" class="rounded mr-3 mt-3 box img-load">
                 {{-- <img src="image/1596678192.Naruto Summoning.jpeg" width="200" alt="foto" class="rounded mr-3 mt-3 box"> --}}
-                @endif
             @endforeach
         </div>
         <hr>
