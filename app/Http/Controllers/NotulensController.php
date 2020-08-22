@@ -118,7 +118,7 @@ class NotulensController extends Controller
 
         // $photo = Photo::all();
 
-        $photo = Photo::where('id_rapat', $meeting->id_rapat)->get();
+        $photo = Photo::where('id_rapat', $meeting->id_rapat)->get('foto');
 
         $notulen = Notulen::all();
         // $photo = Photo::where('id_rapat', $meeting->id_rapat)
