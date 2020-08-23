@@ -1,6 +1,6 @@
 @extends('layout.header')
 
-<title>Dashboard Operator</title>
+<title>Dashboard</title>
 
 @section('bc')
 
