@@ -4,6 +4,7 @@
 
 @section('bca')
 
+<div class="bg">
     <ol class="breadcrumb" style="border:none">
         <li class="breadcrumb-item left_space"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">List OPD</li>
@@ -14,6 +15,7 @@
 
 @section('bc')
 
+<div class="bg">
     <ol class="breadcrumb" style="border:none">
         <li class="breadcrumb-item left_space"><a href="/operator">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Absensi Rapat</li>

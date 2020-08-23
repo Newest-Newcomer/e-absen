@@ -4,6 +4,7 @@
 
 @section('bca')
 
+<div class="bg">
     <ol class="breadcrumb" style="border:none">
         <li class="breadcrumb-item left_space"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Detail Akun</li>
@@ -12,7 +13,7 @@
 @endsection
 
 @section('container')
-    <div>
+    <div class="bg">
         <div class="row">
             <div id="grid-system2" class="col-sm-8">
                 <div >

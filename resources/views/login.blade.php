@@ -2,46 +2,50 @@
 
 <title>Login Page</title>
 
-<div class="container box">
-    <img src="image/logo.jpg" class="logo_lgn card-image-top" width="90px" >
-    <h3 align="center">e-absen</h3>
-    <br/>
-    <hr>
+<body>
 
-    <form method="post" action="/kirimdata" class="">
-        {{csrf_field()}}
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" />
-            @error('username')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
-
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" />
-            @error('password')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
-
-        <div class="form-group btn_submit">
-            <button class="btn btn-info my-2 my-sm-0">Masuk</button>
-        </div>
-
+    <div class="container box bg rounded">
+        <img src="image/logo.jpg" class="logo_lgn card-image-top" width="90px" >
+        <h3 align="center">e-absen</h3>
+        <p align="center" class="font-italic">Sistem Penjadwalan dan Dokumentasi Rapat</p>
         <hr>
 
-        <div class="form-group ctr_txt">
-            <a class="badge badge-success btn_absen font-weight-light" href="/">Absensi Rapat</a>
-        </div>
+        <form method="post" action="/kirimdata" class="">
+            {{csrf_field()}}
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" />
+                @error('username')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
 
-    </form>
-</div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" />
+                @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group btn_submit">
+                <button class="btn btn-info my-2 my-sm-0">Masuk</button>
+            </div>
+
+            <hr>
+
+            <div class="form-group ctr_txt">
+                <a class="badge badge-success btn_absen font-weight-light" href="/">Absensi Rapat</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
 
 
 

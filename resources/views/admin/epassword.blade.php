@@ -2,14 +2,18 @@
 
 <title>Ubah Password</title>
 
-@section('container')
+@section('bca')
 
-<div>
+<div class="bg">
     <ol class="breadcrumb">
         <li class="breadcrumb-item left_space"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item left_space"><a href="/admin/eprofil/{{$operator->id}}">Detail Akun</a></li>
         <li class="breadcrumb-item active" aria-current="page">Ubah Password</li>
     </ol>
+
+@endsection
+@section('container')
+    <div class="bg">
     <div class="row">
         <div id="grid-system2" class="col-sm-8">
             <div >

@@ -4,6 +4,7 @@
 
 @section('bca')
 
+<div class="bg">
     <ol class="breadcrumb" style="border:none">
         <li class="breadcrumb-item left_space"><a href="/admin">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">List OPD</li>
@@ -18,7 +19,7 @@
         <h3 class="left_space">Rincian Kegiatan {{ $operator->nama_instansi }}</h3><hr>
     </div>
 
-    <div class="">
+    <div class="bg">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active mr-auto" id="nav-home-tab" data-toggle="tab" href="#buat_rapat" role="tab" aria-controls="nav-home" aria-selected="true">Buat Rapat</a>
@@ -269,6 +270,5 @@
 
             </div>
         </div>
-    </div>
 
 @endsection
