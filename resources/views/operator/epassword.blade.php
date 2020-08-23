@@ -4,6 +4,7 @@
 
 @section('bc')
 
+<div class="bg">
     <ol class="breadcrumb" style="border:none">
         <li class="breadcrumb-item left_space"><a href="/operator">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page"><a href="/operator/eprofil/{{Auth::user()->id}}">Edit Profil</a></li>

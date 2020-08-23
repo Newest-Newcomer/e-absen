@@ -4,6 +4,17 @@
     z-index: -1;
 }
 
+body {
+    background-image: url("https://humbanghasundutankab.go.id/uploads/1571966578.jpg");
+    background-color: #cccccc;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.bg{
+    background-color: #ffffff;
+}
+
 .badge_kembali{
     width: 100px;
     height: 27px;
@@ -25,6 +36,10 @@
 
 .box_show{
     border: 1px solid black;
+}
+
+.breadcrumb{
+    padding-bottom: 0px;
 }
 
 .btn_submit {

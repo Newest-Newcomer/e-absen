@@ -2,8 +2,8 @@
 
 @section('header')
 
-    <div class="mx-5 border">
-        <div>
+    <div class="ml-5 mr-5">
+        <div class="border">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="mr-auto">
                     <div class="row">
@@ -44,6 +44,7 @@
                     </div>
                 </div>
             </nav>
+
 
             @yield('bc')
 

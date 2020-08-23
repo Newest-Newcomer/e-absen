@@ -4,6 +4,7 @@
 
 @section('bc')
 
+<div class="bg">
     <ol class="breadcrumb" style="border:none">
         <li class="breadcrumb-item left_space"><a href="/operator">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
@@ -13,9 +14,9 @@
 
 @section('container')
 
-    <div class="">
+    <div class="bg">
         <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <div class="nav nav-tabs nav-fills" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active mr-auto" id="nav-home-tab" data-toggle="tab" href="#buat_rapat" role="tab" aria-controls="nav-home" aria-selected="true">Buat Rapat</a>
                 <a class="nav-item nav-link mr-auto" id="nav-profile-tab" data-toggle="tab" href="#daftar_rapat" role="tab" aria-controls="nav-profile" aria-selected="false">Daftar Rapat (Dibuat)</a>
                 <a class="nav-item nav-link mr-auto" id="nav-contact-tab" data-toggle="tab" href="#dokumentasi" role="tab" aria-controls="nav-contact" aria-selected="false">Absensi/Dokumentasi (Berlangsung)</a>
