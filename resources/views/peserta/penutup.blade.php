@@ -2,7 +2,7 @@
 
 <title>Code Rapat</title>
 
-<div class="container box">
+<div class="container box bg">
     <img src="{{ asset('image/logo.jpg') }}" class="logo_lgn" width="90px" >
     <br>
     <h3 align="center">Form Absensi</h3>

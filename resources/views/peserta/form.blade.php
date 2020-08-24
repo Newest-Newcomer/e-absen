@@ -2,7 +2,7 @@
 
 <title>Form Absensi</title>
 
-<div class="container p-3 my-3 border">
+<div class="container p-3 my-3 border bg">
     <img src="{{ asset('image/logo.jpg') }}" class="logo_lgn" width="90px" >
     <br>
     <h3 align="center">Form Absensi</h3>
