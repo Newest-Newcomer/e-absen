@@ -5,7 +5,7 @@
     <div class="container box bg" style="width: 350px; height: 450px;">
         <img src="{{ asset('image/logo.jpg') }}" class="logo_lgn" width="90px" >
         <br>
-        <h2 align="center">e-Absent</h2>
+        <h2 align="center">E-ABSEN</h2>
         <hr>
 
         <form method="get" action="/peserta/form" class="mt-3">
