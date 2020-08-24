@@ -13,27 +13,24 @@
                 @case("Berlangsung")
 
                     <div class="mt-3">
-                        <p class="box judul_absen">Detail Rapat</p>
+                        <h5 class="box judul_absen p-2 mb-2 bg-secondary text-white">Detail Rapat</h5>
                     </div>
-                    <br>
 
                     <table id="w0" class="table table-borderless">
                         <tbody>
-                            <tr><th>Nama Kegiatan       </th><td>{{ $meeting->nama_kegiatan }}</td></tr>
-                            <tr><th>Hari/Tanggal        </th><td>{{ $meeting->tanggal }}</td></tr>
-                            <tr><th>Waktu               </th><td>{{ $meeting->waktu }}</td></tr>
-                            <tr><th>Tempat              </th><td>{{ $meeting->tempat }}</td></tr>
-                            <tr><th>Pimpinan Rapat      </th><td>{{ $meeting->pimpinan_rapat }}</td></tr>
-                            <tr><th>Notulis Rapat       </th><td>{{ $meeting->notulis }}</td></tr>
-                            <tr><th>Kode Rapat          </th><td>{{ $meeting->kode_rapat }}</td></tr>
-
+                            <tr><th style="width: 200px;padding-left: 0px;">Nama Kegiatan       </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->nama_kegiatan }}"></td></tr>
+                            <tr><th style="padding-left: 0px;">Hari/Tanggal        </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->tanggal }}"></td></tr>
+                            <tr><th style="padding-left: 0px;">Waktu               </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->waktu }}"></td></tr>
+                            <tr><th style="padding-left: 0px;">Tempat              </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->tempat }}"></td></tr>
+                            <tr><th style="padding-left: 0px;">Pimpinan Rapat      </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->pimpinan_rapat }}"></td></tr>
+                            <tr><th style="padding-left: 0px;">Notulis Rapat       </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->notulis }}"></td></tr>
+                            <tr><th style="padding-left: 0px;">Kode Rapat          </th><td><input type="text" class="form-control col-10" readonly value="{{ $meeting->kode_rapat }}"></td></tr>
                         </tbody>
                     </table>
 
                     <div>
-                        <p class="box judul_absen">Form Data Diri Peserta Rapat</p>
+                        <h5 class="box judul_absen p-2 mb-2 bg-secondary text-white">Form Data Diri Peserta Rapat</h5>
                     </div>
-                    <br>
 
                     <form method="POST" action="/peserta/form" class="">
                         @csrf
