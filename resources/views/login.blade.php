@@ -6,7 +6,7 @@
 
     <div class="container box bg rounded">
         <img src="image/logo.jpg" class="logo_lgn card-image-top" width="90px" >
-        <h3 align="center">e-absen</h3>
+        <h3 align="center">E-ABSEN</h3>
         <p align="center" class="font-italic">Sistem Penjadwalan dan Dokumentasi Rapat</p>
         <hr>
 

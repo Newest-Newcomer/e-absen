@@ -2,7 +2,7 @@
 
 <title>Code Rapat</title>
 
-    <div class="container box" style="width: 350px; height: 450px;">
+    <div class="container box bg" style="width: 350px; height: 450px;">
         <img src="{{ asset('image/logo.jpg') }}" class="logo_lgn" width="90px" >
         <br>
         <h2 align="center">e-Absent</h2>

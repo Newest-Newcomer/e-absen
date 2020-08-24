@@ -8,7 +8,7 @@
                 <div class="mr-auto">
                     <div class="row">
                         <img src="{{ asset('image/logo.jpeg') }}" class="logo_hdr ml-2" width="70px" >
-                        <h2 class="ml-3 mt-3 font-weight-light">e-absen</h2>
+                        <h2 class="ml-3 mt-3 font-weight-light">E-ABSEN</h2>
                     </div>
                 </div>
 
