@@ -153,7 +153,7 @@
                         <tbody>
                             <ul class="list-unstyled">
                                 @foreach($operators as $operator)
-                                        <li class="mb-2 ml-3"><a href="/admin/opr/{{ $operator->id }}"><font size="4.99"><u>{{ $operator->nama_instansi }}</u></font></a></li>
+                                        <li class="mb-2 ml-3"><a href="/admin/opr/{{ $operator->id }}"><font size="5"><u>{{ $operator->nama_instansi }}</u></font></a></li>
                                 @endforeach
                             </ul>
                         </tbody>

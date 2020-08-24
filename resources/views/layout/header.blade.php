@@ -54,7 +54,7 @@
 
             <footer class="main-footer box_footer" align="center">
                 <strong>
-                    <h6>e-absen</h6>
+                    <h6>E-ABSEN</h6>
                     <h6>Mahasiswa Kerja Praktik IT DEL © 2020</h6>
                     <h6>Dinas Komunikasi dan Informatika Kabupaten Humbang Hasundutan</h6>
                 </strong>
