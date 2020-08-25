@@ -2,8 +2,8 @@
 
 <title>Code Rapat</title>
 
-    <div class="container box bg" style="width: 350px; height: 450px;">
-        <img src="{{ asset('image/logo.jpg') }}" class="logo_lgn" width="90px" >
+    <div class="container bg_login mt-4" style="height: 450px;">
+        <img src="{{ asset('image/logo.jpg') }}" class="logo_lgn pt-3" width="90px" >
         <br>
         <h2 align="center">E-ABSEN</h2>
         <hr>
