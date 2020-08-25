@@ -42,7 +42,7 @@ class login extends Controller
         Auth::guard('operator')->logout();
         }
 
-       return redirect ('/login');
+       return redirect ('/');
 
     }
 }
