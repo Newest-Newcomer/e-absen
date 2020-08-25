@@ -70,22 +70,9 @@ class AdminsController extends Controller
                 'password' => $request->password,
                 'foto'=>$gambarname,
             ]);
-        }
+        };
 
-<<<<<<< Updated upstream
-        // $operator->nama_instansi = $request->nama_instansi;
-        // $operator->nama_operator = $request->nama_operator;
-        // $operator->username = $request->username;
-        // $operator->password = $request->password;
-        // $operator->foto = $request->foto;
-
-
-        // $operator->save();
-
-        return redirect('/admin')->with('status', 'Akun Operator Berhasil Ditambahkan!');
-=======
         return redirect('/admin')->with('status', 'Data Operator Berhasil Ditambahkan!');
->>>>>>> Stashed changes
     }
 
     public function store_meeting(Request $request)
