@@ -72,6 +72,7 @@ class AdminsController extends Controller
             ]);
         }
 
+<<<<<<< Updated upstream
         // $operator->nama_instansi = $request->nama_instansi;
         // $operator->nama_operator = $request->nama_operator;
         // $operator->username = $request->username;
@@ -82,6 +83,9 @@ class AdminsController extends Controller
         // $operator->save();
 
         return redirect('/admin')->with('status', 'Akun Operator Berhasil Ditambahkan!');
+=======
+        return redirect('/admin')->with('status', 'Data Operator Berhasil Ditambahkan!');
+>>>>>>> Stashed changes
     }
 
     public function store_meeting(Request $request)
@@ -123,7 +127,6 @@ class AdminsController extends Controller
         $meeting->save();
 
         return back()->with('status', 'Rapat berhasil ditambahkan!');
-        //return redirect('/admin/opr/$operator')->with('status', 'Rapat berhasil ditambahkan!');
 
     }
 
@@ -161,18 +164,6 @@ class AdminsController extends Controller
             ['status', '=', 'Batal'],
             ['id_opt', '=', $operator->id ],
         ])->get();
-
-        // $md = Meeting::all()
-        //     ->where('status', '=', 'Dibuat');
-
-        // $mb = Meeting::all()
-        //     ->where('status', '=', 'Berlangsung');
-
-        // $ms = Meeting::all()
-        //     ->where('status', '=', 'Selesai');
-
-        // $mg = Meeting::all()
-        //     ->where('status', '=', 'Batal');
 
         $waktu = Audience::all();
 
@@ -356,10 +347,6 @@ class AdminsController extends Controller
         return back()->with('status', 'Notulen Berhasil Diupload');
 
     }
-
-
-
-
 
     /**
      * Remove the specified resource from storage.

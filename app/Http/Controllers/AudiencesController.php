@@ -76,17 +76,6 @@ class AudiencesController extends Controller
 
         $stat = Meeting::all('status');
 
-        // $md = Meeting::all()
-        //     ->where('status', '=', 'Dibuat');
-
-        // $mb = Meeting::all()
-        //     ->where('status', '=', 'Berlangsung');
-
-        // $ms = Meeting::all()
-        //     ->where('status', '=', 'Selesai');
-
-        //$stat = Meeting::status(); salah
-
         return view('peserta.form', compact('meet', 'kode','stat'));
 
     }

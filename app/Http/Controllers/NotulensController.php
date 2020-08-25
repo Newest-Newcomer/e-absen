@@ -60,7 +60,6 @@ class NotulensController extends Controller
 
         $nama_file = $notulen->notulen;
 
-        // $file_path = public_path('notulen'.$notulen->notulen);
         return Response()->download(public_path('notulen/'. $nama_file));
     }
 
@@ -72,7 +71,8 @@ class NotulensController extends Controller
      */
     public function show(Meeting $meeting)
     {
-        $notulen = Notulen::all();
+        $notulen = Notulen::where('id_rapat', $meeting->id_rapat)
+                    ->get();
 
         return view('operator.notulen', compact('meeting', 'notulen'));
     }
@@ -108,30 +108,18 @@ class NotulensController extends Controller
      */
     public function destroy(Notulen $notulen)
     {
-        // Notulen::destroy($notulen->id_notulen);
-        // return back()->with('status', 'Dokumen Notulen Berhasil Dihapus Dari Daftar');
+        // delete data in database
     }
 
     public function cetak_pdf(Meeting $meeting){
 
         $audiences = Audience::all();
 
-        // $photo = Photo::all();
-
         $photo = Photo::where('id_rapat', $meeting->id_rapat)->get('foto');
 
         $notulen = Notulen::all();
-        // $photo = Photo::where('id_rapat', $meeting->id_rapat)
-        //             ->get('foto');
-
-        // foreach($photo as $photos){
-        //     if($photo->id_rapat == $meeting->id_rapat){
-
-        //     }
-        // }
 
     	$pdf = PDF::loadview('cetak', compact('meeting', 'audiences', 'photo', 'notulen'));
         return $pdf->stream('absensi.pdf');
-        // return view('cetak', compact('meeting', 'audiences', 'photo', 'notulen'));
     }
 }

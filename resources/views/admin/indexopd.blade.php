@@ -252,16 +252,6 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{-- @foreach($ms as $meet)
-                                @if($meet->id_opt == $user)
-                                    <tr class="ls_bg_color"><td class="pl-3"><div>{{ $meet->nama_kegiatan }} (Selesai)</div><div style="font-size: 12px;">{{ $meet->tanggal }}</div></td><td ><button class="btn btn-info"><a href="/operator/drrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td></tr>
-                                @endif
-                            @endforeach
-                            @foreach($mg as $meet)
-                                @if($meet->id_opt == $user)
-                                    <tr class="ls_bg_color"><td class="pl-3"><div>{{ $meet->nama_kegiatan }} (Dibatalkan)</div><div style="font-size: 12px;">{{ $meet->tanggal }}</div></td><td ><button class="btn btn-info"><a href="/operator/drrapat/{{ $meet->id_rapat }}" class="text-white">Detail</a></button></td></tr>
-                                @endif
-                            @endforeach --}}
                         </tbody>
                     </table>
 

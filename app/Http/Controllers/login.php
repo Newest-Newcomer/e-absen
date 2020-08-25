@@ -30,7 +30,7 @@ class login extends Controller
         return redirect('/operator');
     }else{
         //gagal login
-        return redirect ('/login');
+        return redirect ('/login')->with('status', 'Username atau Password Salah');
     }
 
 

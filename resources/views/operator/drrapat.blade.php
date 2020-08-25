@@ -4,22 +4,22 @@
 
 @section('bca')
 
-<div class="bg">
-    <ol class="breadcrumb" style="border:none">
-        <li class="breadcrumb-item left_space"><a href="/admin">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">List OPD</li>
-        <li class="breadcrumb-item active" aria-current="page">Riwayat Rapat</li>
-    </ol>
+    <div class="bg">
+        <ol class="breadcrumb" style="border:none">
+            <li class="breadcrumb-item left_space"><a href="/admin">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">List OPD</li>
+            <li class="breadcrumb-item active" aria-current="page">Riwayat Rapat</li>
+        </ol>
 
 @endsection
 
 @section('bc')
 
-<div class="bg">
-    <ol class="breadcrumb" style="border:none">
-        <li class="breadcrumb-item left_space"><a href="/operator">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Riwayat Rapat</li>
-    </ol>
+    <div class="bg">
+        <ol class="breadcrumb" style="border:none">
+            <li class="breadcrumb-item left_space"><a href="/operator">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Riwayat Rapat</li>
+        </ol>
 
 @endsection
 
@@ -55,11 +55,11 @@
                                 <tr><th style="width: 200px;padding-left: 0px;">Kesimpulan          </th><td>:</td><td><input type="text" class="form-control col-10" style="right: 480px;" readonly value="{{ $meeting->kesimpulan }}"></td></tr>
                                 <tr><th style="width: 200px;padding-left: 0px;">Kode Rapat          </th><td>:</td><td><input type="text" class="form-control col-10" style="right: 480px;" readonly value="{{ $meeting->kode_rapat }}"></td></tr>
 
-                                @foreach ($notulen as $notul)
+                                <?php
+                                    $jumlah = $notulen->count();
+                                ?>
 
-                                @endforeach
-
-                                @if ($notul->id_rapat == 'null' && $meeting->status == 'Selesai')
+                                @if ($jumlah == 0)
 
                                 <tr><th style="width: 200px;padding-left: 0px;"><label for="notulen">Upload Notulen Rapat</label></th><td><input type="file" id="notulen" name="notulen"></td></tr>
                             </tbody>
@@ -79,7 +79,6 @@
 
                                 <tr><th style="width: 200px;padding-left: 0px;">Notulen Rapat       </th><td>:</td><td>
                                                                     @foreach ($notulen as $notul)
-                                                                        @if ($notul->id_rapat == $meeting->id_rapat)
                                                                         <input type="text" class="form-control col-10 mb-1" style="right: 480px;" readonly value="{{ $notul->notulen }}">
                                                                             {{-- <form action="{{ $notul->id_notulen }}/notulen" method="POST">
                                                                                 @method('delete')
@@ -91,7 +90,6 @@
                                                                                     </tr>
                                                                                 </table>
                                                                             </form> --}}
-                                                                        @endif
                                                                     @endforeach
                                                                  </td></tr>
                                 <tr><th style="width: 200px;padding-left: 0px;">                    </th><td>

@@ -10,6 +10,12 @@
         <h3 align="center">E-ABSEN</h3>
         <hr>
 
+        @if (session('status'))
+            <div class="alert alert-danger">
+                {{ session('status') }}
+            </div>
+        @endif
+
         <form method="post" action="/kirimdata" class="">
             {{csrf_field()}}
             <div class="form-group">

@@ -136,7 +136,10 @@ class MeetingsController extends Controller
     }
     public function show_drrapat(Meeting $meeting)
     {
-        $notulen = Notulen::all();
+        // $notulen = Notulen::all();
+
+        $notulen = Notulen::where('id_rapat',$meeting->id_rapat)
+                    ->get();
 
         $audiences = Audience::where('id_rapat', $meeting->id_rapat)
                     ->get();
@@ -307,8 +310,7 @@ class MeetingsController extends Controller
      */
     public function destroy(Meeting $meeting)
     {
-        // Meeting::destroy($meeting->id_rapat);
-        // return redirect('/operator')->with('status', 'Rapat Berhasil Dibatalkan!');
+        //delete data in data base
     }
 
 

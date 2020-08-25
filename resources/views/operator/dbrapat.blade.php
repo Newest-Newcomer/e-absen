@@ -62,7 +62,7 @@
                                     @csrf
                                 <tr><th>Kesimpulan          </th>
                                     <td>
-                                        <p><textarea name="kesimpulan" id="kesimpulan" cols="52" rows="2" class="@error('kesimpulan') is-invalid @enderror"></textarea></p>
+                                        <p><textarea name="kesimpulan" id="kesimpulan" cols="52" rows="3" class="@error('kesimpulan') is-invalid @enderror"></textarea></p>
                                         @error('kesimpulan')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
