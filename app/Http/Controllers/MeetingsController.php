@@ -285,7 +285,7 @@ class MeetingsController extends Controller
             ]);
         }
 
-        return redirect('/operator')->with('status', 'Data Operator Berhasil Diperbaharui!');
+        return redirect('/operator')->with('status', 'Data Anda Berhasil Diperbaharui!');
     }
 
     public function update_password(Request $request){
