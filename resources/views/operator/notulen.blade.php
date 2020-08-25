@@ -35,15 +35,15 @@
         @endif
             @csrf
                 <table id="w0" class="table table-borderless">
-                    <tbody>
-                        <tr>
-                            <th style="width: 44px;height: 38px;">
-
-                                <label for="file_input" style="cursor: pointer; color: Dodgerblue;" class="fas fa-file-download fa-2x" width="100px"></label>
-                                <input type="submit" name="notulen" id="file_input" />
-
-                            </th><td><input type="file" name="notul" value="{{ $notul->notulen }}" hidden><p>{{ $notul->notulen }}</p></td></tr>
-                    </tbody>
+                    <tr>
+                        <th style="width: 44px;height: 38px;">
+                            <label for="file_input" style="cursor: pointer; color: Dodgerblue;" class="fas fa-file-download fa-2x" width="100px"></label>
+                            <input type="submit" name="notulen" id="file_input" value="{{ $notul->notulen }}"/>
+                        </th>
+                        <td>
+                            <p>{{ $notul->notulen }}</p>
+                        </td>
+                    </tr>
                 </table>
             </form>
     @endforeach
