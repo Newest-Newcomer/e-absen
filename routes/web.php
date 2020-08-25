@@ -56,7 +56,7 @@ Route::delete('/operator/dbrapat/{audience}/audience', 'AudiencesController@dest
 Route::get('/operator/drrapat/{meeting}', 'MeetingsController@show_drrapat')->middleware('auth:operator');
 Route::put('/operator/drrapat/{meeting}', 'NotulensController@store')->middleware('auth:operator');
 Route::get('/operator/drrapat/{meeting}/notulen', 'NotulensController@show')->middleware('auth:operator');
-Route::get('/operator/drrapat/{notulen}/download', 'NotulensController@download_file')->middleware('auth:operator');
+Route::get('/operator/drrapat/{notulen}/download', 'NotulensController@download_file');
 // Route::delete('/operator/drrapat/{notulen}/notulen', 'NotulensController@destroy')->middleware('auth:operator');
 
 Route::get('/operator/eprofil/{meeting}', 'MeetingsController@edit_profil')->middleware('auth:operator');
