@@ -81,7 +81,7 @@ class AdminsController extends Controller
 
         // $operator->save();
 
-        return redirect('/admin')->with('status', 'Data Operator Berhasil Ditambahkan!');
+        return redirect('/admin')->with('status', 'Akun Operator Berhasil Ditambahkan!');
     }
 
     public function store_meeting(Request $request)
@@ -370,6 +370,6 @@ class AdminsController extends Controller
     public function destroy(Operator $operator)
     {
         Operator::destroy($operator->id);
-        return redirect('/admin')->with('status', 'Data Operator Berhasil Dihapus!');
+        return redirect('/admin')->with('status', 'Akun Operator Berhasil Dihapus!');
     }
 }
