@@ -4,11 +4,13 @@
 
 <body>
 
-    <div class="container box bg rounded">
-        <img src="image/logo.jpg" class="logo_lgn card-image-top" width="90px" >
-        <br>
-        <h3 align="center">E-ABSEN</h3>
-        <hr>
+    <div class="container bg_login rounded mt-4">
+        <div>
+            <img src="image/logo.jpg" class="logo_lgn card-image-top pt-3" width="90px" >
+            <br>
+            <h3 align="center">E-ABSEN</h3>
+            <hr>
+        </div>
 
         @if (session('status'))
             <div class="alert alert-danger">
@@ -39,7 +41,7 @@
             </div>
 
             <div class="form-group btn_submit">
-                <button class="btn btn-info my-2 my-sm-0">Masuk</button>
+                <button class="btn btn-info my-2 my-sm-0" style="width: 286px">Masuk</button>
             </div>
 
             <hr>
