@@ -71,12 +71,11 @@ class AudiencesController extends Controller
     public function show(Request $request)
     {
 
-        $meet = Meeting::all();
         $kode = $request->input('kodeRapat');
 
-        $stat = Meeting::all('status');
+        $meet = Meeting::where('kode_rapat', $kode)->get();
 
-        return view('peserta.form', compact('meet', 'kode','stat'));
+        return view('peserta.form', compact('meet', 'kode'));
 
     }
 
