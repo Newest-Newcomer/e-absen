@@ -25,7 +25,6 @@ class CreateMeetingsTable extends Migration
             $table->string('pimpinan_rapat');
             $table->string('notulis');
             $table->string('status');
-            $table->string('notulen')->default('-');
             $table->string('kesimpulan')->default('-');
             $table->time('started_at')->nullable($value = true);
             $table->time('ended_at')->nullable($value = true);

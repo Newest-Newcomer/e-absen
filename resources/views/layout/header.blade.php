@@ -31,7 +31,7 @@
 
                 @else
 
-                <img src="{{ asset('image')}}/{{Auth::user()->foto}}" class="logo_hdr ml-2" width="50px" >
+                <img src="{{ asset('image')}}/{{Auth::user()->foto}}" class="logo_hdr ml-2 rounded" width="50px" >
 
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
