@@ -59,9 +59,8 @@ class NotulensController extends Controller
     public function download_file(Request $request, Notulen $notulen){
 
         $nama_file = $notulen->notulen;
-        return $nama_file;
 
-        // return Response()->download(public_path('notulen/'. $nama_file));
+        return Response()->download(public_path('notulen/'. $nama_file));
     }
 
     /**
